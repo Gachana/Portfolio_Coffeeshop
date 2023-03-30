@@ -1,0 +1,285 @@
+@import "mixin";
+
+body {
+  font-family:  'Alkatra', cursive, Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #E3DBD0;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: #333;
+
+  :hover {
+    opacity: 0.7;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+//レイアウト
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+//ヘッダー
+
+.header {
+  padding: 50px 0;
+  display: block;
+}
+
+.header .logo {
+  width: 280px;
+  margin: 0 auto;
+}
+
+//メインビジュアル
+
+.main-visual {
+  text-align: center;
+}
+
+//グローバルナビ
+
+.global-nav {
+  padding: 40px 0;
+}
+
+.global-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.global-nav ul li {
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  margin-right: 80px;
+}
+
+.global-nav ul li:last-child {
+  margin-right: 0;
+}
+
+//コンセプト
+
+.concept {
+  padding: 40px 0;
+}
+
+.concept .container {
+  display: flex;
+  align-items: center;
+}
+
+.concept .img {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.concept .desc {
+  width: 50%;
+  padding-left: 40px;
+  padding-right: 20px;
+}
+
+.concept .subtitle {
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  margin-bottom: 25px;
+}
+
+.concept .title {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+}
+
+.concept .text {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+
+//ブログ
+
+.blog {
+  padding: 40px 0;
+}
+
+.blog .heading {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.blog .subtitle {
+  display: block;
+  font-size: 14px;
+  margin-top: 8px;
+  letter-spacing: 0.1em;
+}
+
+.blog .list {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.blog .list .item {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.blog .list .item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.blog .list .item {
+  .img {
+    margin-bottom: 20px;
+  }
+  .title {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    text-align: left;
+  }
+  .date {
+    font-size: 12px;
+    margin-top: 6px;
+  }
+}
+
+.blog .btn {
+  display: block;
+  position: relative;
+  width: 220px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  margin: 0 auto;
+  padding: 18px 0;
+  border: 1px solid #333;
+  border-radius: 2px;
+}
+
+//フッター
+.footer {
+  background-color: #333;
+  padding: 70px 0 30px;
+
+  >.logo {
+    width: 180px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  >.copyright {
+    color: #E3DBD0;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+@include sp {
+  .container {
+    padding: 0 30px;
+  }
+
+  .header {
+    padding: 30px 0;
+    .logo {
+      width: 160px;
+    }
+  }
+
+  .global-nav ul li {
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    margin-right: 60px;
+  }
+  
+  .global-nav ul li:last-child {
+    margin-right: 0;
+  }
+
+  .concept .container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  
+  .concept .img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .concept .desc {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: none;
+  }
+  
+  .concept .subtitle {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .concept .title {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+  
+  .concept .text {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  .blog .heading {
+    font-size: 26px;
+  }
+  
+  .blog .list {
+    display: flex;
+    flex-flow: column;
+  }
+  
+  .blog .list .item {
+    width: 100%;
+  }
+
+  .blog .btn {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  .footer {
+    padding: 60px 0 20px;
+    
+    >.logo {
+      width: 100px;
+    }
+    >.copyright {
+      font-size: 10px;
+    }
+  }
+}
